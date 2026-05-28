@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 '''principal component analysis'''
 from sklearn.decomposition import PCA
 
