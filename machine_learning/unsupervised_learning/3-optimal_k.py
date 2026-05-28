@@ -13,5 +13,5 @@ def optimal_k(X, max_clusters, random_state):
         model = K_Means(X, i, random_state)
         elbow.append(model.inertia_)
         silhouette.append(metrics.silhouette_score(X, model.labels_))
-    clusters = range(2, max_clusters)
+    clusters = list(range(2, max_clusters + 1))
     return clusters, elbow, silhouette
