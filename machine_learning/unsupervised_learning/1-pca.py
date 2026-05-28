@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 '''principal component analysis'''
-from sklearn.decomposition import PCA
+from sklearn import decomposition
 
 
 def Apply_PCA(X, n_components, random_state):
     '''apply pca'''
-    pca = PCA(n_components=n_components, random_state=random_state)
+    pca = decomposition.PCA(n_components=n_components, random_state=random_state)
     return pca.fit_transform(X)
