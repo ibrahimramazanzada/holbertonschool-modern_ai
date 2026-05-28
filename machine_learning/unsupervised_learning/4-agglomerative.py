@@ -12,4 +12,6 @@ def Agglomerative_Clustering(X, n_clusters, random_state,
         X, _ = Apply_PCA(X, n_components, random_state)
     model = cluster.AgglomerativeClustering(n_clusters=n_clusters)
     labels = model.fit_predict(X)
+    if n_clusters == 1:
+        return model, X, None
     return model, X, metrics.silhouette_score(X, labels)
